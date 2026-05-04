@@ -23,7 +23,7 @@ function GoldLine() {
  );
 }
 const slide =
- "h-[100dvh] w-full snap-start flex flex-col items-center justify-center px-8 text-center";
+ "h-[100dvh] w-full snap-start flex flex-col items-center justify-center px-5 sm:px-8 text-center";
 
 function getTimeLeft(target: number) {
  const diff = Math.max(0, target - Date.now());
@@ -85,17 +85,17 @@ function Countdown() {
 
        {phase && time ? (
          <>
-           <p className="font-[family-name:var(--font-inter)] text-xs sm:text-sm tracking-[0.35em] uppercase text-[#D4AF37] mt-12 sm:mt-16">
+           <p className="font-[family-name:var(--font-inter)] text-sm sm:text-sm tracking-[0.35em] uppercase text-[#D4AF37] mt-12 sm:mt-16">
              {phase.label}
            </p>
 
-           <div className="flex items-start gap-6 sm:gap-10 mt-10 sm:mt-14">
+           <div className="flex items-start gap-5 sm:gap-10 mt-8 sm:mt-14">
              {units.map(({ value, label }) => (
-               <div key={label} className="flex flex-col items-center">
-                 <span className="font-[family-name:var(--font-playfair)] text-5xl md:text-7xl font-normal text-[#1A3626] tabular-nums leading-none">
+               <div key={label} className="flex flex-col items-center min-w-[3.5rem] sm:min-w-0">
+                 <span className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl md:text-7xl font-normal text-[#1A3626] tabular-nums leading-none">
                    {String(value).padStart(2, "0")}
                  </span>
-                 <span className="font-[family-name:var(--font-inter)] text-xs tracking-widest text-[#D4AF37] uppercase mt-3">
+                 <span className="font-[family-name:var(--font-inter)] text-[10px] sm:text-xs tracking-widest text-[#D4AF37] uppercase mt-3">
                    {label}
                  </span>
                </div>
@@ -160,16 +160,16 @@ export default function Home() {
            className="flex flex-col items-center"
          >
            <p
-             className="font-[family-name:var(--font-amiri)] text-[#D4AF37] text-2xl sm:text-3xl md:text-4xl mb-10 sm:mb-16"
+             className="font-[family-name:var(--font-amiri)] text-[#D4AF37] text-[1.7rem] sm:text-3xl md:text-4xl mb-10 sm:mb-16"
              dir="rtl"
              lang="ar"
            >
              بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ
            </p>
 
-           <h1 className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl md:text-8xl font-normal tracking-tight leading-tight">
+           <h1 className="font-[family-name:var(--font-playfair)] text-[2.5rem] sm:text-5xl md:text-8xl font-normal tracking-tight leading-tight">
              Nadeem Akhtar Choudhury
-             <span className="block text-[#D4AF37] text-xl sm:text-2xl md:text-4xl font-[family-name:var(--font-playfair)] italic my-3 sm:my-4 md:my-6">
+             <span className="block text-[#D4AF37] text-2xl sm:text-2xl md:text-4xl font-[family-name:var(--font-playfair)] italic my-3 sm:my-4 md:my-6">
                &amp;
              </span>
              Sadaf Shabaz Khan
@@ -202,7 +202,7 @@ export default function Home() {
            <GoldLine />
 
            <p
-             className="font-[family-name:var(--font-amiri)] text-2xl sm:text-3xl md:text-4xl leading-relaxed mt-10 sm:mt-16 text-[#1A3626]"
+             className="font-[family-name:var(--font-amiri)] text-[1.6rem] sm:text-3xl md:text-4xl leading-relaxed mt-10 sm:mt-16 text-[#1A3626]"
              dir="rtl"
              lang="ar"
            >
@@ -211,7 +211,7 @@ export default function Home() {
              ۚ إِنَّ فِي ذَٰلِكَ لَآيَاتٍ لِّقَوْمٍ يَتَفَكَّرُونَ
            </p>
 
-           <p className="font-[family-name:var(--font-playfair)] text-base sm:text-lg md:text-xl italic text-[#1A3626]/70 mt-8 sm:mt-10 leading-relaxed max-w-lg mx-auto">
+           <p className="font-[family-name:var(--font-playfair)] text-[1.05rem] sm:text-lg md:text-xl italic text-[#1A3626]/70 mt-8 sm:mt-10 leading-relaxed max-w-lg mx-auto">
              &ldquo;And among His signs is that He created for you mates from
              among yourselves, that you may dwell in tranquility with them, and
              He has put love and mercy between your hearts. Verily in that are
@@ -233,7 +233,7 @@ export default function Home() {
            variants={fadeUp}
            className="w-full max-w-4xl"
          >
-           <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-20 md:gap-0">
+           <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-15 md:gap-0">
              {/* Nikah */}
              <div className="flex flex-col items-center text-center md:pr-10">
                <GoldLine />
@@ -242,28 +242,28 @@ export default function Home() {
                  The Ceremony
                </p>
 
-               <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl md:text-5xl font-normal mt-3">
+               <h2 className="font-[family-name:var(--font-playfair)] text-4xl sm:text-4xl md:text-5xl font-normal mt-3">
                  Nikah
                </h2>
 
-               <div className="mt-8 space-y-1">
-                 <p className="font-[family-name:var(--font-inter)] text-sm sm:text-base text-[#1A3626]/70">
+               <div className="mt-6 space-y-1">
+                 <p className="font-[family-name:var(--font-inter)] text-base sm:text-base text-[#1A3626]/70">
                    Friday, 15th May 2026
                  </p>
-                 <p className="font-[family-name:var(--font-inter)] text-xs sm:text-sm text-[#1A3626]/50">
+                 <p className="font-[family-name:var(--font-inter)] text-sm sm:text-sm text-[#1A3626]/50">
                    (27th Dhul-Qi&rsquo;dah, 1447 AH)
                  </p>
-                 <p className="font-[family-name:var(--font-inter)] text-sm sm:text-base text-[#1A3626]/70 mt-2">
+                 <p className="font-[family-name:var(--font-inter)] text-base sm:text-base text-[#1A3626]/70 mt-2">
                    5:00 PM &ndash; 6:30 PM
                  </p>
                </div>
 
-               <div className="mt-6 flex flex-col items-center">
+               <div className="mt-4 flex flex-col items-center">
                  <svg viewBox="0 0 24 24" className="w-5 h-5 text-[#D4AF37]/50" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7Z" />
                    <circle cx="12" cy="9" r="2.5" />
                  </svg>
-                 <p className="font-[family-name:var(--font-playfair)] text-base sm:text-lg text-[#1A3626] mt-2">
+                 <p className="font-[family-name:var(--font-playfair)] text-lg sm:text-lg text-[#1A3626] mt-2">
                    The Mount Riviera Hotel
                  </p>
                  <a
@@ -290,28 +290,28 @@ export default function Home() {
                  The Reception
                </p>
 
-               <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl md:text-5xl font-normal mt-3">
+               <h2 className="font-[family-name:var(--font-playfair)] text-4xl sm:text-4xl md:text-5xl font-normal mt-3">
                  Walima
                </h2>
 
                <div className="mt-8 space-y-1">
-                 <p className="font-[family-name:var(--font-inter)] text-sm sm:text-base text-[#1A3626]/70">
+                 <p className="font-[family-name:var(--font-inter)] text-base sm:text-base text-[#1A3626]/70">
                    Sunday, 17th May 2026
                  </p>
-                 <p className="font-[family-name:var(--font-inter)] text-xs sm:text-sm text-[#1A3626]/50">
+                 <p className="font-[family-name:var(--font-inter)] text-sm sm:text-sm text-[#1A3626]/50">
                    (29th Dhul-Qi&rsquo;dah, 1447 AH)
                  </p>
-                 <p className="font-[family-name:var(--font-inter)] text-sm sm:text-base text-[#1A3626]/70 mt-2">
+                 <p className="font-[family-name:var(--font-inter)] text-base sm:text-base text-[#1A3626]/70 mt-2">
                    5:00 PM onwards
                  </p>
                </div>
 
-               <div className="mt-6 flex flex-col items-center">
+               <div className="mt-4 flex flex-col items-center">
                  <svg viewBox="0 0 24 24" className="w-5 h-5 text-[#D4AF37]/50" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7Z" />
                    <circle cx="12" cy="9" r="2.5" />
                  </svg>
-                 <p className="font-[family-name:var(--font-playfair)] text-base sm:text-lg text-[#1A3626] mt-2">
+                 <p className="font-[family-name:var(--font-playfair)] text-lg sm:text-lg text-[#1A3626] mt-2">
                    Palmgrove Officers Institute
                  </p>
                  <a
@@ -338,13 +338,13 @@ export default function Home() {
          >
            <GoldLine />
 
-           <p className="font-[family-name:var(--font-playfair)] text-xl sm:text-2xl md:text-3xl italic text-[#1A3626]/80 mt-16 leading-relaxed">
+           <p className="font-[family-name:var(--font-playfair)] text-2xl sm:text-2xl md:text-3xl italic text-[#1A3626]/80 mt-12 sm:mt-16 leading-relaxed">
              We look forward to celebrating
              <br />
              with you.
            </p>
 
-           <p className="font-[family-name:var(--font-inter)] text-xs sm:text-sm tracking-[0.2em] uppercase text-[#D4AF37]/60 mt-12">
+           <p className="font-[family-name:var(--font-inter)] text-sm sm:text-sm tracking-[0.2em] uppercase text-[#D4AF37]/60 mt-10 sm:mt-12">
              Nadeem &amp; Sadaf
            </p>
          </motion.div>
